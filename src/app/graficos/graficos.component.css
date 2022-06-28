@@ -1,14 +1,16 @@
-/* #meu_primeiro_grafico, #segundo_grafico, #terceiro_grafico{
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 30px;
-    margin-left: 30px;
-    margin-top:30px;
-} */
-mat-card{
-    margin: 20px;
+mat-card {
+  margin: 20px;
+}
+.painel {
+  margin-top: 5vh;
+  margin-left: 30px;
+}
+
+.painel h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.painel p {
+  font-size: 15px;
 }

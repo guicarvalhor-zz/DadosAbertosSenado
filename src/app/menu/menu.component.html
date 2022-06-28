@@ -1,35 +1,22 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <img id="logo" src="./assets/img/logo.png">
     <mat-toolbar>Dados disponíveis</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="grafico">Receitas</a>
-      <a mat-list-item routerLink="">Despesas</a>
+      <a mat-list-item >Receitas e Despesas</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Dados Abertos - Dashboard - Senado Federal</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <!-- Inserir o primeiro gráfico -->
-    <div class="painel">
-      <h1>Receitas</h1>
-      <p>Dados relativos à previsão e à arrecadação de receitas próprias pelo Senado Federal a partir de 2012.</p>  
-    </div>
-    
-    <div class="" style="width: 89%; height: 100vh; margin-top: 30px;">
-      <!-- <app-graficos></app-graficos> -->
+      <span> Dashboard - Senado Federal</span>
+    </mat-toolbar>    
+    <div class="layout-grafico">
+      <app-graficos></app-graficos>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
